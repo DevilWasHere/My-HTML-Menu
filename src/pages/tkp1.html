@@ -1,0 +1,166 @@
+<html>
+<head>
+<title>iOSEXPLOITS</title>
+<meta name="viewport" content="width=device-width,initial-scale=1.0,user-scalable=no" />
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="description" content="YeetDisDude | Mod Menu Template">
+<meta property="og:image" content="https://cdn.glitch.global/f3f23a67-1b2b-4f22-8c23-0c4a7b2f0c5a/chika%20doge.jpg?v=1659710555775" />
+<meta name="theme-color" content="#adffca">
+<link rel="stylesheet" href="/Local/MyModMenu/src/css/tkp1.css" />
+
+
+<script src="https://apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js"></script>
+<script>
+
+if(typeof $ == 'undefined') alert("Network connection failed, please restart!");
+
+$(document).ready(function(){
+    //alert();
+    //Click on the binding menu to switch subpages
+    $("div.menubox").click(function(){
+        $("div.menubox").removeClass("current");
+        $("div.menuview").removeClass("current");
+        $(this).addClass("current");
+
+        var menuid = $(this).attr("menu");
+        $("div#"+menuid).addClass("current");
+    });
+
+    /*Disable text option and drag*/
+    document.body.onselectstart = document.body.ondrag =function(){
+        return false;
+    }
+
+    $("input").blur(function(){
+        window.scroll(0,0); //After the input in the text box is completed, the page automatically scrolls to the top
+    });
+
+    document.body.addEventListener('touchstart', function () {});
+
+    if(typeof h5gg!='undefined') {
+        //Set the title bar area to drag the floating window
+        setWindowDrag(0, 0, 400, 80);
+        //Set size and position
+        setWindowRect(60,60,300,300);
+    }
+});
+
+function buttonclick(input)
+{
+    console.log("button clicked = "+input.innerText);
+}
+
+function checkboxclick(input)
+{
+    console.log("checkbox clicked = "+input.parentElement.innerText+" = "+input.checked);
+}
+
+function rangechange(input)
+{
+    console.log("slider change = "+input.value);
+    let valuelabel = document.getElementById("sliderValue")
+    valuelabel.textContent = input.value
+    input.oninput = function(){
+          sliderValue.textContent = this.value
+    }
+}
+
+function radioclick(input)
+{
+    console.log("radio clicked: group = "+input.name+" = "+input.parentElement.innerText+" = "+input.value);
+}
+</script>
+
+</head>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<body bgcolor="#2c2f33" style="margin:0;">
+<!--title-->
+<div id="titleBar" style="background-color:#23272a; padding:5px; margin:0px;">
+  &nbspiOSEXPLOITS                   <a href="template.html"><i class="fa fa-refresh"></i></a>
+
+</div>
+<!--Use a table to lay out the left and right columns-->
+<table id="bodyView" width="100%" style="table-layout:fixed;height: calc(100% - 30px) ;">
+
+<tr>
+
+<td width="30%" style="vertical-align:top">
+
+  <div>
+    <div class="menubox current" menu="menu1">Checkbox</div>
+    <div class="menubox" menu="menu2">Button</div>
+    <div class="menubox" menu="menu3">Slider</div>
+    <div class="menubox" menu="menu4">Radio</div>
+    <div class="menubox" onclick="backjs()">EXIT</div>
+  </div>
+
+<script src="/Local/MyModMenu/src/js/spk(home).js"></script>
+
+</td>
+<td style="vertical-align:top" class="scrollbar">
+<div id="menu1" class="menuview current">
+<p>CheckBox</p>
+    <label><input type="checkbox" checked="checked" onclick="checkboxclick(this)" />Option1</label>
+    <p>
+    <label><input type="checkbox"  onclick="checkboxclick(this)" />Option2</label>
+    <p>
+    <label><input type="checkbox"  onclick="checkboxclick(this)" />Option3</label>
+    <p>
+    <label><input type="checkbox" onclick="checkboxclick(this)" />Option4</label>
+    <p>
+</div>
+
+<div id="menu2" class="menuview">
+
+<p>Button</p>
+    <button onclick="buttonclick(this)">Button1</button>
+    <p>
+    <button onclick="buttonclick(this)">Button2</button>
+    <p>
+    <button onclick="buttonclick(this)">Button3</button>
+    <p>
+    <button onclick="buttonclick(this)">Button4</button>
+</div>
+
+<div id="menu3" class="menuview">
+  <p>Slider1</p>
+  <div class="field">
+    <div id="sliderValue">100</div>
+    <input type="range" min="1" max="100" steps="1" value="50" style="width:50%;" onchange="rangechange(this)" />
+  </div>
+
+
+
+
+</div>
+
+
+
+
+<div id="menu4" class="menuview">
+    <p>Radio</p>
+  <label><input name="radio-group1" type="radio" value="1" checked onclick="radioclick(this)" />Option1</label>
+  <p><label><input name="radio-group1" type="radio" value="2"  onclick="radioclick(this)" />Option2</label>
+  <p><label><input name="radio-group1" type="radio" value="3"  onclick="radioclick(this)" />Option3</label>
+  <p>Radio 2</p>
+  <label><input name="radio-group2" type="radio" checked="checked"  onclick="radioclick(this)" />Option1</label>
+  <p><label><input name="radio-group2" type="radio"  onclick="radioclick(this)" />Option2</label>
+  <p><label><input name="radio-group2" type="radio"  onclick="radioclick(this)" />Option3</label>
+  <p>Radio 3</p>
+  <label><input name="radio-group3" type="radio" checked="checked"  onclick="radioclick(this)" />Option1</label>
+  <p><label><input name="radio-group3" type="radio"  onclick="radioclick(this)" />Option2</label>
+  <p><label><input name="radio-group3" type="radio"  onclick="radioclick(this)" />Option3</label>
+  <p><label><input name="radio-group3" type="radio"  onclick="radioclick(this)" />Option4</label>
+  <p><label><input name="radio-group3" type="radio"  onclick="radioclick(this)" />Option5</label>
+</div>
+
+
+
+</td>
+
+</tr>
+
+</table>
+
+</body>
+</html>
