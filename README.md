@@ -1,3 +1,3 @@
 # i make cool stuff
-im also an editer so check out my tt @juicewrldenergy
-https://tiktok.com/@juicewrldenergy
+- Im also an editer
+- https://tiktok.com/@juicewrldenergy
