@@ -1,3 +1,3 @@
 # i make cool stuff
-- Im also an editer
-- https://tiktok.com/@juicewrldenergy
+- i like coding and programing
+- I know HTML, CSS, JS, Swift, Object-C, I know enough about Arch Linux, Im experienced in the iOS Jailbreaking communtiy, Ive jailbroken a couple of phones, Im very experienced in iOS Sideloading.
